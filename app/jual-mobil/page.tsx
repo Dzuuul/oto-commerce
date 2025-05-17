@@ -1,20 +1,29 @@
-import { AccordionContent } from "@/components/ui/accordion"
-import { AccordionTrigger } from "@/components/ui/accordion"
-import { AccordionItem } from "@/components/ui/accordion"
-import { Accordion } from "@/components/ui/accordion"
-import type { Metadata } from "next"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { FadeIn, SlideIn } from "@/components/ui/motion"
-import SellForm from "@/components/sell/sell-form"
-import { Check, ArrowRight, ShieldCheck, DollarSign, Car, Phone, Mail, Quote } from "lucide-react"
+import { AccordionContent } from "@/components/ui/accordion";
+import { AccordionTrigger } from "@/components/ui/accordion";
+import { AccordionItem } from "@/components/ui/accordion";
+import { Accordion } from "@/components/ui/accordion";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { FadeIn, SlideIn } from "@/components/ui/motion";
+import SellForm from "@/components/sell/sell-form";
+import {
+  Check,
+  ArrowRight,
+  ShieldCheck,
+  DollarSign,
+  Car,
+  Phone,
+  Mail,
+  Quote,
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Jual Mobil | AutoBekas",
-  description: "Jual mobil Anda dengan cepat dan harga terbaik di AutoBekas",
-}
+  title: "Jual Mobil | OttoFikri",
+  description: "Jual mobil Anda dengan cepat dan harga terbaik di OttoFikri",
+};
 
 export default function SellCarPage() {
   return (
@@ -33,9 +42,12 @@ export default function SellCarPage() {
           <div className="absolute inset-0 z-20 flex items-center">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-2xl">
-                <h1 className="text-4xl font-bold text-white mb-4">Jual Mobil Anda dengan Mudah</h1>
+                <h1 className="text-4xl font-bold text-white mb-4">
+                  Jual Mobil Anda dengan Mudah
+                </h1>
                 <p className="text-xl text-gray-200 mb-6">
-                  Dapatkan penawaran terbaik untuk mobil Anda dalam waktu 24 jam. Proses cepat, aman, dan transparan.
+                  Dapatkan penawaran terbaik untuk mobil Anda dalam waktu 24
+                  jam. Proses cepat, aman, dan transparan.
                 </p>
                 <Button className="bg-red-600 hover:bg-red-700">
                   <a href="#sell-form">Jual Sekarang</a>
@@ -48,9 +60,12 @@ export default function SellCarPage() {
         {/* How It Works */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Bagaimana Cara Kerjanya?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Bagaimana Cara Kerjanya?
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Proses menjual mobil di AutoBekas sangat mudah dan cepat. Ikuti langkah-langkah berikut:
+              Proses menjual mobil di OttoFikri sangat mudah dan cepat. Ikuti
+              langkah-langkah berikut:
             </p>
           </div>
 
@@ -59,7 +74,8 @@ export default function SellCarPage() {
               {
                 icon: <Car className="h-10 w-10 text-red-600" />,
                 title: "Isi Data Mobil",
-                description: "Lengkapi formulir dengan data mobil Anda seperti merek, model, tahun, dan kondisi mobil.",
+                description:
+                  "Lengkapi formulir dengan data mobil Anda seperti merek, model, tahun, dan kondisi mobil.",
               },
               {
                 icon: <ShieldCheck className="h-10 w-10 text-red-600" />,
@@ -97,7 +113,9 @@ export default function SellCarPage() {
             <SlideIn direction="left" className="w-full lg:w-[61.8%]">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                 <div className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Jual Mobil Anda</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                    Jual Mobil Anda
+                  </h2>
                   <Tabs defaultValue="sell">
                     <TabsList className="grid w-full grid-cols-2 mb-8">
                       <TabsTrigger value="sell">Jual Cepat</TabsTrigger>
@@ -106,8 +124,9 @@ export default function SellCarPage() {
                     <TabsContent value="sell">
                       <div className="mb-6">
                         <p className="text-gray-600">
-                          Jual mobil Anda langsung kepada AutoBekas. Dapatkan penawaran dalam 24 jam dan pembayaran
-                          langsung ke rekening Anda.
+                          Jual mobil Anda langsung kepada OttoFikri. Dapatkan
+                          penawaran dalam 24 jam dan pembayaran langsung ke
+                          rekening Anda.
                         </p>
                       </div>
                       <SellForm type="sell" />
@@ -115,8 +134,9 @@ export default function SellCarPage() {
                     <TabsContent value="consign">
                       <div className="mb-6">
                         <p className="text-gray-600">
-                          Titipkan mobil Anda untuk dijual oleh AutoBekas. Kami akan memasarkan mobil Anda dan Anda
-                          mendapatkan harga terbaik.
+                          Titipkan mobil Anda untuk dijual oleh OttoFikri. Kami
+                          akan memasarkan mobil Anda dan Anda mendapatkan harga
+                          terbaik.
                         </p>
                       </div>
                       <SellForm type="consign" />
@@ -130,16 +150,21 @@ export default function SellCarPage() {
               <div className="space-y-6">
                 <Card className="border-0 shadow-lg overflow-hidden">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Mengapa Menjual di AutoBekas?</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      Mengapa Menjual di OttoFikri?
+                    </h3>
                     <ul className="space-y-4">
                       <li className="flex items-start">
                         <div className="mr-3 mt-1">
                           <Check className="h-5 w-5 text-green-600" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900">Proses Cepat</h4>
+                          <h4 className="font-semibold text-gray-900">
+                            Proses Cepat
+                          </h4>
                           <p className="text-gray-600">
-                            Dapatkan penawaran dalam 24 jam dan selesaikan transaksi dalam 3 hari.
+                            Dapatkan penawaran dalam 24 jam dan selesaikan
+                            transaksi dalam 3 hari.
                           </p>
                         </div>
                       </li>
@@ -148,9 +173,12 @@ export default function SellCarPage() {
                           <Check className="h-5 w-5 text-green-600" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900">Harga Terbaik</h4>
+                          <h4 className="font-semibold text-gray-900">
+                            Harga Terbaik
+                          </h4>
                           <p className="text-gray-600">
-                            Kami menawarkan harga kompetitif berdasarkan kondisi dan nilai pasar mobil Anda.
+                            Kami menawarkan harga kompetitif berdasarkan kondisi
+                            dan nilai pasar mobil Anda.
                           </p>
                         </div>
                       </li>
@@ -159,8 +187,13 @@ export default function SellCarPage() {
                           <Check className="h-5 w-5 text-green-600" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900">Proses Mudah</h4>
-                          <p className="text-gray-600">Kami menangani semua dokumen dan administrasi untuk Anda.</p>
+                          <h4 className="font-semibold text-gray-900">
+                            Proses Mudah
+                          </h4>
+                          <p className="text-gray-600">
+                            Kami menangani semua dokumen dan administrasi untuk
+                            Anda.
+                          </p>
                         </div>
                       </li>
                       <li className="flex items-start">
@@ -168,9 +201,12 @@ export default function SellCarPage() {
                           <Check className="h-5 w-5 text-green-600" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900">Pembayaran Aman</h4>
+                          <h4 className="font-semibold text-gray-900">
+                            Pembayaran Aman
+                          </h4>
                           <p className="text-gray-600">
-                            Pembayaran langsung ke rekening Anda setelah inspeksi dan deal disepakati.
+                            Pembayaran langsung ke rekening Anda setelah
+                            inspeksi dan deal disepakati.
                           </p>
                         </div>
                       </li>
@@ -182,7 +218,8 @@ export default function SellCarPage() {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-4">Butuh Bantuan?</h3>
                     <p className="text-gray-300 mb-4">
-                      Tim kami siap membantu Anda dengan pertanyaan seputar penjualan mobil Anda.
+                      Tim kami siap membantu Anda dengan pertanyaan seputar
+                      penjualan mobil Anda.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center">
@@ -200,7 +237,7 @@ export default function SellCarPage() {
                         </div>
                         <div>
                           <p className="text-sm text-gray-400">Email</p>
-                          <p className="font-medium">jual@autobekas.com</p>
+                          <p className="font-medium">jual@ottofikri.com</p>
                         </div>
                       </div>
                     </div>
@@ -214,9 +251,11 @@ export default function SellCarPage() {
         {/* Testimonials */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Apa Kata Mereka</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Apa Kata Mereka
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Pengalaman penjual yang telah menjual mobil melalui AutoBekas
+              Pengalaman penjual yang telah menjual mobil melalui OttoFikri
             </p>
           </div>
 
@@ -233,25 +272,31 @@ export default function SellCarPage() {
                 name: "Siti Rahayu",
                 role: "Penjual Honda Jazz",
                 content:
-                  "Awalnya ragu, tapi ternyata proses di AutoBekas sangat profesional. Inspeksi detail dan transparan, harga yang ditawarkan juga sangat baik.",
+                  "Awalnya ragu, tapi ternyata proses di OttoFikri sangat profesional. Inspeksi detail dan transparan, harga yang ditawarkan juga sangat baik.",
                 avatar: "/placeholder.svg?height=100&width=100&text=SR",
               },
               {
                 name: "Andi Wijaya",
                 role: "Penjual Mitsubishi Pajero",
                 content:
-                  "Saya titip jual mobil di AutoBekas dan dalam 2 minggu sudah terjual dengan harga yang memuaskan. Sangat direkomendasikan!",
+                  "Saya titip jual mobil di OttoFikri dan dalam 2 minggu sudah terjual dengan harga yang memuaskan. Sangat direkomendasikan!",
                 avatar: "/placeholder.svg?height=100&width=100&text=AW",
               },
             ].map((testimonial, index) => (
-              <SlideIn key={testimonial.name} direction="up" delay={index * 0.1}>
+              <SlideIn
+                key={testimonial.name}
+                direction="up"
+                delay={index * 0.1}
+              >
                 <Card className="border-0 shadow-lg h-full">
                   <CardContent className="p-6">
                     <div className="flex flex-col h-full">
                       <div className="mb-4">
                         <Quote className="h-8 w-8 text-red-600 opacity-50" />
                       </div>
-                      <p className="text-gray-700 mb-6 flex-grow">{testimonial.content}</p>
+                      <p className="text-gray-700 mb-6 flex-grow">
+                        {testimonial.content}
+                      </p>
                       <div className="flex items-center">
                         <div className="relative h-12 w-12 rounded-full overflow-hidden mr-4">
                           <Image
@@ -262,8 +307,12 @@ export default function SellCarPage() {
                           />
                         </div>
                         <div>
-                          <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                          <p className="text-sm text-gray-600">{testimonial.role}</p>
+                          <h4 className="font-bold text-gray-900">
+                            {testimonial.name}
+                          </h4>
+                          <p className="text-sm text-gray-600">
+                            {testimonial.role}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -277,9 +326,12 @@ export default function SellCarPage() {
         {/* FAQ */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Pertanyaan Umum</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Pertanyaan Umum
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Jawaban untuk pertanyaan yang sering diajukan tentang penjualan mobil di AutoBekas
+              Jawaban untuk pertanyaan yang sering diajukan tentang penjualan
+              mobil di OttoFikri
             </p>
           </div>
 
@@ -287,9 +339,9 @@ export default function SellCarPage() {
             <Accordion type="single" collapsible className="space-y-4">
               {[
                 {
-                  question: "Berapa lama proses penjualan mobil di AutoBekas?",
+                  question: "Berapa lama proses penjualan mobil di OttoFikri?",
                   answer:
-                    "Proses penjualan di AutoBekas sangat cepat. Anda akan mendapatkan penawaran dalam 24 jam setelah mengisi formulir. Jika penawaran disetujui, proses inspeksi dan pembayaran dapat diselesaikan dalam 3-5 hari kerja.",
+                    "Proses penjualan di OttoFikri sangat cepat. Anda akan mendapatkan penawaran dalam 24 jam setelah mengisi formulir. Jika penawaran disetujui, proses inspeksi dan pembayaran dapat diselesaikan dalam 3-5 hari kerja.",
                 },
                 {
                   question: "Bagaimana cara menentukan harga mobil saya?",
@@ -302,9 +354,10 @@ export default function SellCarPage() {
                     "Dokumen yang perlu disiapkan antara lain: BPKB asli, STNK asli, bukti pembayaran pajak terbaru, KTP pemilik sesuai BPKB, buku servis (jika ada), dan kunci cadangan.",
                 },
                 {
-                  question: "Apakah ada biaya untuk menjual mobil di AutoBekas?",
+                  question:
+                    "Apakah ada biaya untuk menjual mobil di OttoFikri?",
                   answer:
-                    "Tidak ada biaya untuk menjual mobil Anda di AutoBekas. Seluruh proses inspeksi dan penilaian gratis. Untuk opsi titip jual, kami akan mengenakan komisi dari harga jual yang disepakati.",
+                    "Tidak ada biaya untuk menjual mobil Anda di OttoFikri. Seluruh proses inspeksi dan penilaian gratis. Untuk opsi titip jual, kami akan mengenakan komisi dari harga jual yang disepakati.",
                 },
                 {
                   question: "Bagaimana jika mobil saya masih dalam kredit?",
@@ -313,8 +366,12 @@ export default function SellCarPage() {
                 },
               ].map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left font-medium">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-gray-600">{faq.answer}</AccordionContent>
+                  <AccordionTrigger className="text-left font-medium">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600">
+                    {faq.answer}
+                  </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
@@ -327,11 +384,17 @@ export default function SellCarPage() {
             <div className="container mx-auto px-4 py-16">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 <div className="text-white max-w-2xl">
-                  <h2 className="text-3xl font-bold mb-4">Siap Menjual Mobil Anda?</h2>
+                  <h2 className="text-3xl font-bold mb-4">
+                    Siap Menjual Mobil Anda?
+                  </h2>
                   <p className="text-xl opacity-90 mb-6">
-                    Dapatkan penawaran terbaik untuk mobil Anda dalam waktu 24 jam. Proses cepat, aman, dan transparan.
+                    Dapatkan penawaran terbaik untuk mobil Anda dalam waktu 24
+                    jam. Proses cepat, aman, dan transparan.
                   </p>
-                  <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
+                  <Button
+                    size="lg"
+                    className="bg-white text-red-600 hover:bg-gray-100"
+                  >
                     <a href="#sell-form" className="flex items-center">
                       Jual Sekarang
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -352,5 +415,5 @@ export default function SellCarPage() {
         </FadeIn>
       </FadeIn>
     </div>
-  )
+  );
 }

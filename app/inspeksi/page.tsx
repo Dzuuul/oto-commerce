@@ -1,16 +1,25 @@
-import { Badge } from "@/components/ui/badge"
-import type { Metadata } from "next"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { FadeIn, SlideIn } from "@/components/ui/motion"
-import InspectionForm from "@/components/inspection/inspection-form"
-import { Check, ArrowRight, ShieldCheck, Wrench, Clipboard, Car, Phone, Mail } from "lucide-react"
+import { Badge } from "@/components/ui/badge";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { FadeIn, SlideIn } from "@/components/ui/motion";
+import InspectionForm from "@/components/inspection/inspection-form";
+import {
+  Check,
+  ArrowRight,
+  ShieldCheck,
+  Wrench,
+  Clipboard,
+  Car,
+  Phone,
+  Mail,
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Inspeksi Mobil | AutoBekas",
-  description: "Layanan inspeksi mobil profesional dari AutoBekas",
-}
+  title: "Inspeksi Mobil | OttoFikri",
+  description: "Layanan inspeksi mobil profesional dari OttoFikri",
+};
 
 export default function InspectionPage() {
   return (
@@ -29,10 +38,12 @@ export default function InspectionPage() {
           <div className="absolute inset-0 z-20 flex items-center">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-2xl">
-                <h1 className="text-4xl font-bold text-white mb-4">Inspeksi Mobil Profesional</h1>
+                <h1 className="text-4xl font-bold text-white mb-4">
+                  Inspeksi Mobil Profesional
+                </h1>
                 <p className="text-xl text-gray-200 mb-6">
-                  Dapatkan kepastian kondisi mobil dengan layanan inspeksi menyeluruh dari tim teknisi berpengalaman
-                  kami.
+                  Dapatkan kepastian kondisi mobil dengan layanan inspeksi
+                  menyeluruh dari tim teknisi berpengalaman kami.
                 </p>
                 <Button className="bg-red-600 hover:bg-red-700">
                   <a href="#inspection-form">Jadwalkan Inspeksi</a>
@@ -45,10 +56,12 @@ export default function InspectionPage() {
         {/* Inspection Points */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Inspeksi 175+ Titik</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Inspeksi 175+ Titik
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tim teknisi kami melakukan pemeriksaan menyeluruh pada lebih dari 175 titik untuk memastikan kondisi mobil
-              yang sebenarnya.
+              Tim teknisi kami melakukan pemeriksaan menyeluruh pada lebih dari
+              175 titik untuk memastikan kondisi mobil yang sebenarnya.
             </p>
           </div>
 
@@ -95,7 +108,9 @@ export default function InspectionPage() {
                       <div className="h-16 w-16 rounded-full bg-red-100 flex items-center justify-center mb-4">
                         {category.icon}
                       </div>
-                      <h3 className="text-xl font-bold mb-4">{category.title}</h3>
+                      <h3 className="text-xl font-bold mb-4">
+                        {category.title}
+                      </h3>
                       <ul className="space-y-2 flex-grow">
                         {category.points.map((point, idx) => (
                           <li key={idx} className="flex items-start">
@@ -116,9 +131,12 @@ export default function InspectionPage() {
         <section className="mb-16 bg-gray-50 py-16 rounded-2xl">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Proses Inspeksi</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Proses Inspeksi
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Kami melakukan inspeksi dengan standar tinggi untuk memberikan hasil yang akurat dan transparan.
+                Kami melakukan inspeksi dengan standar tinggi untuk memberikan
+                hasil yang akurat dan transparan.
               </p>
             </div>
 
@@ -127,22 +145,26 @@ export default function InspectionPage() {
                 {
                   step: "1",
                   title: "Jadwalkan Inspeksi",
-                  description: "Isi formulir dan pilih waktu yang sesuai untuk inspeksi mobil Anda.",
+                  description:
+                    "Isi formulir dan pilih waktu yang sesuai untuk inspeksi mobil Anda.",
                 },
                 {
                   step: "2",
                   title: "Inspeksi Dilakukan",
-                  description: "Tim teknisi kami akan melakukan inspeksi menyeluruh pada mobil Anda.",
+                  description:
+                    "Tim teknisi kami akan melakukan inspeksi menyeluruh pada mobil Anda.",
                 },
                 {
                   step: "3",
                   title: "Laporan Disiapkan",
-                  description: "Kami menyiapkan laporan detail tentang kondisi mobil Anda.",
+                  description:
+                    "Kami menyiapkan laporan detail tentang kondisi mobil Anda.",
                 },
                 {
                   step: "4",
                   title: "Hasil Inspeksi",
-                  description: "Anda menerima laporan lengkap dengan rekomendasi dan estimasi nilai mobil.",
+                  description:
+                    "Anda menerima laporan lengkap dengan rekomendasi dan estimasi nilai mobil.",
                 },
               ].map((step, index) => (
                 <SlideIn key={index} direction="up" delay={index * 0.1}>
@@ -174,7 +196,9 @@ export default function InspectionPage() {
             <SlideIn direction="left" className="w-full lg:w-[61.8%]">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                 <div className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Jadwalkan Inspeksi</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                    Jadwalkan Inspeksi
+                  </h2>
                   <InspectionForm />
                 </div>
               </div>
@@ -184,16 +208,21 @@ export default function InspectionPage() {
               <div className="space-y-6">
                 <Card className="border-0 shadow-lg overflow-hidden">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Mengapa Inspeksi dengan AutoBekas?</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      Mengapa Inspeksi dengan OttoFikri?
+                    </h3>
                     <ul className="space-y-4">
                       <li className="flex items-start">
                         <div className="mr-3 mt-1">
                           <Check className="h-5 w-5 text-green-600" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900">Tim Ahli</h4>
+                          <h4 className="font-semibold text-gray-900">
+                            Tim Ahli
+                          </h4>
                           <p className="text-gray-600">
-                            Inspeksi dilakukan oleh teknisi berpengalaman dengan sertifikasi resmi.
+                            Inspeksi dilakukan oleh teknisi berpengalaman dengan
+                            sertifikasi resmi.
                           </p>
                         </div>
                       </li>
@@ -202,9 +231,12 @@ export default function InspectionPage() {
                           <Check className="h-5 w-5 text-green-600" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900">Inspeksi Menyeluruh</h4>
+                          <h4 className="font-semibold text-gray-900">
+                            Inspeksi Menyeluruh
+                          </h4>
                           <p className="text-gray-600">
-                            Pemeriksaan lebih dari 175 titik untuk memastikan kondisi mobil yang sebenarnya.
+                            Pemeriksaan lebih dari 175 titik untuk memastikan
+                            kondisi mobil yang sebenarnya.
                           </p>
                         </div>
                       </li>
@@ -213,9 +245,12 @@ export default function InspectionPage() {
                           <Check className="h-5 w-5 text-green-600" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900">Laporan Detail</h4>
+                          <h4 className="font-semibold text-gray-900">
+                            Laporan Detail
+                          </h4>
                           <p className="text-gray-600">
-                            Anda mendapatkan laporan lengkap dengan foto dan rekomendasi perbaikan.
+                            Anda mendapatkan laporan lengkap dengan foto dan
+                            rekomendasi perbaikan.
                           </p>
                         </div>
                       </li>
@@ -224,9 +259,12 @@ export default function InspectionPage() {
                           <Check className="h-5 w-5 text-green-600" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900">Estimasi Nilai</h4>
+                          <h4 className="font-semibold text-gray-900">
+                            Estimasi Nilai
+                          </h4>
                           <p className="text-gray-600">
-                            Dapatkan estimasi nilai jual mobil Anda berdasarkan kondisi aktual.
+                            Dapatkan estimasi nilai jual mobil Anda berdasarkan
+                            kondisi aktual.
                           </p>
                         </div>
                       </li>
@@ -236,10 +274,14 @@ export default function InspectionPage() {
 
                 <Card className="border-0 shadow-lg overflow-hidden">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Biaya Inspeksi</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      Biaya Inspeksi
+                    </h3>
                     <div className="space-y-4">
                       <div className="flex justify-between items-center pb-2 border-b">
-                        <span className="font-medium">Mobil Sedan/Hatchback</span>
+                        <span className="font-medium">
+                          Mobil Sedan/Hatchback
+                        </span>
                         <span className="font-bold">Rp 500.000</span>
                       </div>
                       <div className="flex justify-between items-center pb-2 border-b">
@@ -251,7 +293,8 @@ export default function InspectionPage() {
                         <span className="font-bold">Rp 850.000</span>
                       </div>
                       <p className="text-sm text-gray-600 mt-4">
-                        * Biaya inspeksi akan dikembalikan jika Anda menjual atau membeli mobil melalui AutoBekas.
+                        * Biaya inspeksi akan dikembalikan jika Anda menjual
+                        atau membeli mobil melalui OttoFikri.
                       </p>
                     </div>
                   </CardContent>
@@ -261,7 +304,8 @@ export default function InspectionPage() {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-4">Butuh Bantuan?</h3>
                     <p className="text-gray-300 mb-4">
-                      Tim kami siap membantu Anda dengan pertanyaan seputar layanan inspeksi mobil.
+                      Tim kami siap membantu Anda dengan pertanyaan seputar
+                      layanan inspeksi mobil.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center">
@@ -279,7 +323,7 @@ export default function InspectionPage() {
                         </div>
                         <div>
                           <p className="text-sm text-gray-400">Email</p>
-                          <p className="font-medium">inspeksi@autobekas.com</p>
+                          <p className="font-medium">inspeksi@ottofikri.com</p>
                         </div>
                       </div>
                     </div>
@@ -293,9 +337,12 @@ export default function InspectionPage() {
         {/* Inspection Sample */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Contoh Laporan Inspeksi</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Contoh Laporan Inspeksi
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Laporan inspeksi kami memberikan informasi detail tentang kondisi mobil yang diperiksa.
+              Laporan inspeksi kami memberikan informasi detail tentang kondisi
+              mobil yang diperiksa.
             </p>
           </div>
 
@@ -313,7 +360,10 @@ export default function InspectionPage() {
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="relative aspect-[4/3] w-full overflow-hidden rounded-md">
+                      <div
+                        key={i}
+                        className="relative aspect-[4/3] w-full overflow-hidden rounded-md"
+                      >
                         <Image
                           src={`/placeholder.svg?height=300&width=400&text=Detail ${i}`}
                           alt={`Detail Inspeksi ${i}`}
@@ -327,8 +377,12 @@ export default function InspectionPage() {
                 <div className="w-full md:w-1/2">
                   <div className="bg-gray-50 p-6 rounded-xl mb-6">
                     <div className="flex justify-between items-center mb-4">
-                      <h3 className="text-xl font-bold">Honda Civic Turbo 2020</h3>
-                      <Badge className="bg-green-100 text-green-800">Sangat Baik</Badge>
+                      <h3 className="text-xl font-bold">
+                        Honda Civic Turbo 2020
+                      </h3>
+                      <Badge className="bg-green-100 text-green-800">
+                        Sangat Baik
+                      </Badge>
                     </div>
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div>
@@ -352,7 +406,9 @@ export default function InspectionPage() {
 
                   <div className="space-y-6">
                     <div className="border-b pb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Kondisi Eksterior</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Kondisi Eksterior
+                      </h4>
                       <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                         <div className="flex items-center">
                           <ShieldCheck className="h-5 w-5 text-green-600 mr-2" />
@@ -374,7 +430,9 @@ export default function InspectionPage() {
                     </div>
 
                     <div className="border-b pb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Kondisi Mesin</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Kondisi Mesin
+                      </h4>
                       <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                         <div className="flex items-center">
                           <ShieldCheck className="h-5 w-5 text-green-600 mr-2" />
@@ -396,9 +454,12 @@ export default function InspectionPage() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Rekomendasi</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Rekomendasi
+                      </h4>
                       <p className="text-gray-600 mb-2">
-                        Mobil dalam kondisi sangat baik dan terawat. Beberapa rekomendasi:
+                        Mobil dalam kondisi sangat baik dan terawat. Beberapa
+                        rekomendasi:
                       </p>
                       <ul className="space-y-1 text-gray-600">
                         <li className="flex items-start">
@@ -424,12 +485,17 @@ export default function InspectionPage() {
             <div className="container mx-auto px-4 py-16">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 <div className="text-white max-w-2xl">
-                  <h2 className="text-3xl font-bold mb-4">Dapatkan Kepastian Sebelum Membeli</h2>
+                  <h2 className="text-3xl font-bold mb-4">
+                    Dapatkan Kepastian Sebelum Membeli
+                  </h2>
                   <p className="text-xl opacity-90 mb-6">
-                    Jadwalkan inspeksi mobil sekarang dan dapatkan laporan detail tentang kondisi mobil yang ingin Anda
-                    beli.
+                    Jadwalkan inspeksi mobil sekarang dan dapatkan laporan
+                    detail tentang kondisi mobil yang ingin Anda beli.
                   </p>
-                  <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
+                  <Button
+                    size="lg"
+                    className="bg-white text-red-600 hover:bg-gray-100"
+                  >
                     <a href="#inspection-form" className="flex items-center">
                       Jadwalkan Inspeksi
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -450,5 +516,5 @@ export default function InspectionPage() {
         </FadeIn>
       </FadeIn>
     </div>
-  )
+  );
 }

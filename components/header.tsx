@@ -1,12 +1,13 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Menu, X, Car } from "lucide-react"
+import Link from "next/link";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Car } from "lucide-react";
+import Image from "next/image";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md">
@@ -14,14 +15,24 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Car className="h-8 w-8 text-red-600" />
-              <span className="text-xl font-bold text-gray-900">AutoBekas</span>
+              {/* <Car className="h-8 w-8 text-red-600" /> */}
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={30}
+                height={30}
+                className="rounded-full"
+              />
+              <span className="text-xl font-bold text-gray-900">OttoFikri</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-sm font-medium text-gray-900 hover:text-red-600 transition-colors">
+            <Link
+              href="/"
+              className="text-sm font-medium text-gray-900 hover:text-red-600 transition-colors"
+            >
               Beranda
             </Link>
             <Link
@@ -30,10 +41,16 @@ export default function Header() {
             >
               Daftar Mobil
             </Link>
-            <Link href="/tentang" className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+            <Link
+              href="/tentang"
+              className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors"
+            >
               Tentang
             </Link>
-            <Link href="/kontak" className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+            <Link
+              href="/kontak"
+              className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors"
+            >
               Kontak
             </Link>
           </nav>
@@ -42,7 +59,9 @@ export default function Header() {
             <Button variant="outline" className="h-9 px-4 text-sm">
               Masuk
             </Button>
-            <Button className="h-9 px-4 text-sm bg-red-600 hover:bg-red-700">Daftar</Button>
+            <Button className="h-9 px-4 text-sm bg-red-600 hover:bg-red-700">
+              Daftar
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -53,7 +72,11 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
-              {isMenuOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="block h-6 w-6" />
+              ) : (
+                <Menu className="block h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -95,11 +118,13 @@ export default function Header() {
               <Button variant="outline" className="w-full justify-center">
                 Masuk
               </Button>
-              <Button className="w-full justify-center bg-red-600 hover:bg-red-700">Daftar</Button>
+              <Button className="w-full justify-center bg-red-600 hover:bg-red-700">
+                Daftar
+              </Button>
             </div>
           </div>
         </div>
       )}
     </header>
-  )
+  );
 }
